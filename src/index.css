@@ -1,0 +1,116 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root{
+    --primary-dark: #5651e5;
+    --primary-light: #709dff
+}
+.icon{
+    color: var(--primary-dark);
+}
+
+
+body{
+    background-color: #fafafa;
+}
+
+.underlineBox::after{
+    content: '';
+    width: 130px;
+    height: 2px;
+    background-color: #428fc1;
+    position: absolute;
+    bottom: -5px;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* Firefox */
+input[type='number'] {
+    -moz-appearance: textfield;
+}
+.mainSideNav{
+    display: block;
+}
+
+.mobileSideNav{
+    display:none
+}
+
+@media screen and (max-width: 1070px) {
+    .meterDashboard{
+        flex-direction: column;
+    }
+    .meterGraph{
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+    .meterUsage{
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 1070px) {
+    .mainSideNav{
+        display: none;
+    }
+        .mobileSideNav {
+            display: block
+        }
+}
+
+@media screen and (max-width: 615px) {
+    .meterGraphHeader{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+@media screen and (max-width: 500px){
+    .adminInfo{
+        display: none;
+    }
+    .imidCustomers{
+        font-size: 12px;
+    }
+    .userInfo{
+        margin-left: .5rem;
+    }
+    .userImage{
+        height: 2rem;
+        width: 2rem;
+    }
+    .underlineBox::after{
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 400px) {
+.meterReadingCTA{
+    flex-direction: column;
+}
+.meterReadingBtn{
+    margin-top: 1rem;
+    height: 3rem;
+}
+.meterReadingInput{
+    width: 30%;
+}
+.meterReadingContainer{
+    display: flex;
+    justify-content: space-between;
+}
+.meterUsageLast{
+    width: 100%;
+}
+.meterUsageLast p{
+    font-size: 12px;
+}
+}
+
